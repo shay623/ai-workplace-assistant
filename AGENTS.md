@@ -28,3 +28,5 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+- AI calls go through one server function in src/lib/ai.functions.ts with per-feature prompts; no database or auth by design (user requirement).
