@@ -25,7 +25,7 @@ function Index() {
       <section className="panel p-6 md:p-10">
         <span className="eyebrow">Good to see you</span>
         <h1 className="mt-2 max-w-2xl font-display text-3xl leading-tight md:text-5xl">Your quiet partner for sharper, faster work.</h1>
-        <p className="mt-3 max-w-xl text-muted-foreground">AI Workplace Assistant drafts emails, distils research and answers workplace questions — so you spend time deciding, not typing.</p>
+        <p className="mt-3 max-w-xl text-muted-foreground">AI Workplace Assistant drafts emails, summarizes research and answers workplace questions — so you spend time deciding, not typing.</p>
       </section>
       <section className="grid gap-4 md:grid-cols-3">
         {tools.map((t) => (
@@ -38,7 +38,7 @@ function Index() {
         ))}
       </section>
       <section className="panel grid gap-6 p-6 md:grid-cols-3">
-        {[["Draft", "Formal, friendly or persuasive emails in seconds."], ["Distil", "Turn long reading into structured, actionable notes."], ["Discuss", "A context-aware assistant for everyday work questions."]].map(([a, b]) => (
+        {[["Draft", "Formal, friendly or persuasive emails in seconds."], ["Summarizes", "Turn long reading into structured, actionable notes."], ["Discuss", "A context-aware assistant for everyday work questions."]].map(([a, b]) => (
           <div key={a}><p className="font-display text-xl">{a}</p><p className="text-sm text-muted-foreground">{b}</p></div>
         ))}
       </section>
