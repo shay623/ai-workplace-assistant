@@ -18,7 +18,7 @@ export function AppShell({ children }: { children: ReactNode }) {
     <div className="flex min-h-screen w-full">
       <aside className={`fixed inset-y-0 left-0 z-40 w-64 bg-sidebar text-sidebar-foreground transition-transform md:static md:translate-x-0 ${open ? "translate-x-0" : "-translate-x-full"}`}>
         <div className="flex h-16 items-center justify-between px-5">
-          <span className="font-display text-xl">Atelier<span className="text-sidebar-primary">.</span></span>
+          <span className="font-display text-lg leading-tight">AI Workplace Assistant<span className="text-sidebar-primary">.</span></span>
           <button className="md:hidden" onClick={() => setOpen(false)} aria-label="Close menu"><X size={18} /></button>
         </div>
         <nav className="space-y-1 px-3">

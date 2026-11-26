@@ -4,9 +4,9 @@ import { Disclaimer } from "@/components/output-box";
 
 export const Route = createFileRoute("/settings")({
   head: () => ({ meta: [
-    { title: "Settings — Atelier" },
+    { title: "Settings — AI Workplace Assistant" },
     { name: "description", content: "About your AI workplace assistant and how your data is handled." },
-    { property: "og:title", content: "Settings — Atelier" },
+    { property: "og:title", content: "Settings — AI Workplace Assistant" },
     { property: "og:description", content: "About your AI workplace assistant." },
     { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" },
   ] }),
@@ -22,7 +22,7 @@ function SettingsPage() {
   ];
   return (
     <div className="space-y-5">
-      <PageHead title="Settings" sub="How Atelier works and handles your information." />
+      <PageHead title="Settings" sub="How AI Workplace Assistant works and handles your information." />
       <div className="panel divide-y divide-border">
         {rows.map(([k, v]) => <div key={k} className="flex flex-col gap-1 p-4 sm:flex-row sm:justify-between"><span className="font-medium">{k}</span><span className="text-sm text-muted-foreground">{v}</span></div>)}
       </div>

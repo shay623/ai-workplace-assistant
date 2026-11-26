@@ -8,9 +8,9 @@ import { Disclaimer, ErrorNote, OutputBox } from "@/components/output-box";
 
 export const Route = createFileRoute("/email")({
   head: () => ({ meta: [
-    { title: "Smart Email Generator — Atelier" },
+    { title: "Smart Email Generator — AI Workplace Assistant" },
     { name: "description", content: "Generate complete professional emails in a formal, friendly or persuasive tone." },
-    { property: "og:title", content: "Smart Email Generator — Atelier" },
+    { property: "og:title", content: "Smart Email Generator — AI Workplace Assistant" },
     { property: "og:description", content: "Generate complete professional emails with AI." },
     { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" },
   ] }),

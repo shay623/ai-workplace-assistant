@@ -9,9 +9,9 @@ import { CopyButton, Disclaimer, ErrorNote } from "@/components/output-box";
 
 export const Route = createFileRoute("/chat")({
   head: () => ({ meta: [
-    { title: "AI Workplace Chat — Atelier" },
+    { title: "AI Workplace Chat — AI Workplace Assistant" },
     { name: "description", content: "Ask workplace questions and get dynamic, practical AI answers." },
-    { property: "og:title", content: "AI Workplace Chat — Atelier" },
+    { property: "og:title", content: "AI Workplace Chat — AI Workplace Assistant" },
     { property: "og:description", content: "A workplace assistant for everyday professional questions." },
     { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" },
   ] }),

@@ -8,9 +8,9 @@ import { Disclaimer, ErrorNote, OutputBox } from "@/components/output-box";
 
 export const Route = createFileRoute("/research")({
   head: () => ({ meta: [
-    { title: "AI Research Assistant — Atelier" },
+    { title: "AI Research Assistant — AI Workplace Assistant" },
     { name: "description", content: "Summaries, key insights and practical recommendations from any topic, article or URL." },
-    { property: "og:title", content: "AI Research Assistant — Atelier" },
+    { property: "og:title", content: "AI Research Assistant — AI Workplace Assistant" },
     { property: "og:description", content: "Turn reading into structured, actionable notes." },
     { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" },
   ] }),
