@@ -394,6 +394,12 @@ This project was developed using Lovable to accelerate frontend development and 
 
 The application is intended to remain lightweight and straightforward, avoiding unnecessary backend infrastructure and complex application architecture.
 
+## Author
+
+**Shameega Sonday**
+
+Github: 'https://deskwise-writing-research.lovable.app'
+
 ### 📄 License
 
 This project is available for educational and portfolio purposes.
