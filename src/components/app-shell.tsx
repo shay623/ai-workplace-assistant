@@ -29,15 +29,6 @@ export function AppShell({ children }: { children: ReactNode }) {
             </Link>
           ))}
         </nav>
-        <div className="px-3 pt-3 md:hidden">
-          <button
-            type="button"
-            onClick={() => setOpen(false)}
-            className="nav-item w-full border border-sidebar-border text-sidebar-foreground"
-          >
-            <X size={16} /> Exit
-          </button>
-        </div>
         <p className="absolute bottom-5 left-5 right-5 text-xs text-sidebar-foreground/50">AI workplace productivity assistant</p>
       </aside>
       {open && <div className="fixed inset-0 z-30 bg-foreground/40 md:hidden" onClick={() => setOpen(false)} />}
