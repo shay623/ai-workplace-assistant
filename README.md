@@ -248,14 +248,14 @@ Make sure you have installed:
 
 - bash
 
-- git clone https://deskwise-writing-research.lovable.app
+- git clone https://github.com/shay623/ai-workplace-assistant.git
 
 2. Navigate to the Project Folder
 
 - bash
 
-- cd https://github.com/shay623/ai-workplace-assistant
-
+- cd ai-workplace-assistant
+  
 3. Install Dependencies
 
 - bash
