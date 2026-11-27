@@ -126,7 +126,7 @@ The application is designed to work across multiple screen sizes.
 
 - Users should verify important information, research findings, recommendations, and generated emails before relying on them.
 
-# 3. Technologies and Tools Used:
+# 2. Technologies and Tools Used:
    
 The application was developed using Lovable and modern frontend technologies.
 
@@ -172,7 +172,7 @@ The application uses a modern SaaS design with:
 
 The design avoids the traditional generic blue-and-white AI interface in favour of a more professional workplace aesthetic.
 
-## 4. Application Architecture:
+## 3. Application Architecture:
 
 The application follows a lightweight frontend-only architecture.
 
@@ -232,7 +232,7 @@ Important: A frontend-only application can connect directly to an AI provider on
 
 exposed in public frontend code. A secure intermediary may be required for production use.
 
-# ⚙️ Setup Instructions
+# 4.⚙️ Setup Instructions
 
 Follow these steps to run the project locally.
 
@@ -260,7 +260,7 @@ Make sure you have installed:
 
 - bash
 
-- npm install
+- bun install
 
 4. Configure AI Integration
 
@@ -284,7 +284,7 @@ If your Lovable project already has an AI integration configured, follow its exi
 
 - bash
 
-- npm run dev
+- bun run dev
 
 Open the local URL displayed in your terminal, usually:
 
@@ -306,55 +306,49 @@ To preview the production build locally:
 
 - npm run preview
 
-# 📁 Project Structure
+# 5.📁 Project Structure
 
 A typical project structure:
 
 - text
 
-- ai-workplace-productivity-assistant/
+ai-workplace-assistant/
 
 │
+
+├── .lovable/
 
 ├── public/
 
-│
-
 ├── src/
 
-│   ├── components/
-
-│   ├── pages/
-
-│   ├── hooks/
-
-│   ├── lib/
-
-│   ├── assets/
-
-│   ├── App.tsx
-
-│   ├── main.tsx
-
-│   └── index.css
-
 │
-
-├── .env
 
 ├── .gitignore
 
-├── index.html
+├── .prettierignore
+
+├── .prettierrc
+
+├── AGENTS.md
+
+├── README.md
+
+├── bun.lock
+
+├── bunfig.toml
+
+├── components.json
+
+├── eslint.config.js
 
 ├── package.json
-
-├── tailwind.config.ts
 
 ├── tsconfig.json
 
 ├── vite.config.ts
 
-└── README.md
+└── vitest.config.ts
 
 ### 🎨 Design Philosophy
 
