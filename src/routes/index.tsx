@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Mail, BookOpen, MessageSquare, ArrowRight } from "lucide-react";
+import { Mail, BookOpen, MessageSquare, ArrowRight, NotebookPen } from "lucide-react";
 import { Disclaimer } from "@/components/output-box";
 
 export const Route = createFileRoute("/")({
@@ -16,6 +16,7 @@ export const Route = createFileRoute("/")({
 const tools = [
   { to: "/email", icon: Mail, title: "Smart Email Generator", text: "Describe what you need and pick a tone — get a complete, polished email." },
   { to: "/research", icon: BookOpen, title: "Research Assistant", text: "Summaries, key insights and recommendations from a topic, article or URL." },
+  { to: "/meeting-notes", icon: NotebookPen, title: "Meeting Notes Summarizer", text: "Summarize lengthy meeting notes and extract action items, decisions and deadlines." },
   { to: "/chat", icon: MessageSquare, title: "Workplace Chat", text: "Ask anything about work — planning, writing, meetings, careers." },
 ] as const;
 
@@ -27,7 +28,7 @@ function Index() {
         <h1 className="mt-2 max-w-2xl font-display text-3xl leading-tight md:text-5xl">Your quiet partner for sharper, faster work.</h1>
         <p className="mt-3 max-w-xl text-muted-foreground">AI Workplace Assistant drafts emails, summarizes research and answers workplace questions — so you spend time deciding, not typing.</p>
       </section>
-      <section className="grid gap-4 md:grid-cols-3">
+      <section className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
         {tools.map((t) => (
           <Link key={t.to} to={t.to} className="panel group flex flex-col p-5 transition-colors hover:border-ring">
             <span className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-md bg-secondary"><t.icon size={18} /></span>
@@ -37,8 +38,8 @@ function Index() {
           </Link>
         ))}
       </section>
-      <section className="panel grid gap-6 p-6 md:grid-cols-3">
-        {[["Draft", "Formal, friendly or persuasive emails in seconds."], ["Summarizes", "Turn long reading into structured, actionable notes."], ["Discuss", "A context-aware assistant for everyday work questions."]].map(([a, b]) => (
+      <section className="panel grid gap-6 p-6 md:grid-cols-2 lg:grid-cols-4">
+        {[["Draft", "Formal, friendly or persuasive emails in seconds."], ["Summarizes", "Turn long reading into structured, actionable notes."], ["Organizes", "Pull decisions, action items and deadlines out of meeting notes."], ["Discuss", "A context-aware assistant for everyday work questions."]].map(([a, b]) => (
           <div key={a}><p className="font-display text-xl">{a}</p><p className="text-sm text-muted-foreground">{b}</p></div>
         ))}
       </section>

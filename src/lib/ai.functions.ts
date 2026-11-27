@@ -4,6 +4,7 @@ type Msg = { role: "user" | "assistant"; content: string };
 type Input =
   | { kind: "email"; details: string; tone: string }
   | { kind: "research"; source: string; mode: string }
+  | { kind: "notes"; notes: string }
   | { kind: "chat"; messages: Msg[] };
 
 const SYSTEM = {
@@ -11,6 +12,8 @@ const SYSTEM = {
     "You are an expert business writer. Write a complete, ready-to-send professional email. Output in plain text: first line 'Subject: ...', blank line, then greeting, well-structured body paragraphs, a clear call to action, and a sign-off with [Your Name]. Match the requested tone precisely. Do not add commentary before or after the email.",
   research:
     "You are a senior research analyst. Analyse the provided material and respond in Markdown with exactly these sections: '## Summary' (one concise paragraph), '## Key Insights' (4-6 bullets), '## Important Points' (4-6 bullets with facts, figures or caveats), '## Practical Recommendations' (3-5 actionable bullets for professionals). If only a URL is given and you cannot access it, say so briefly and analyse based on what the URL and your general knowledge suggest, clearly flagged. Be accurate; never invent statistics.",
+  notes:
+    "You are an expert meeting secretary. Convert the supplied meeting notes into a clean Markdown summary with exactly these sections: '## Summary' (one concise paragraph), '## Key Decisions' (bullets), '## Action Items' (bullets written as 'Owner — task — due date'), '## Deadlines' (bullets of dates and what is due, earliest first), '## Open Questions' (bullets). Use only information present in the notes: never invent owners, dates or decisions. Where something is missing, write 'Unassigned', 'No deadline given' or 'None recorded'. Be terse and factual.",
   chat:
     "You are AI Workplace Assistant, a knowledgeable workplace productivity assistant for professionals. Give practical, specific, well-structured answers (use Markdown headings, bullets and short paragraphs where helpful). Cover communication, planning, management, careers, writing, meetings and tools. Ask a clarifying question when a request is ambiguous. Be concise, honest about uncertainty, and never fabricate facts.",
 };
@@ -40,6 +43,10 @@ export const runAI = createServerFn({ method: "POST" })
       if (!data.source.trim()) throw new Error("Please provide a topic, text or URL.");
       instructions = SYSTEM.research;
       input = [{ role: "user", content: `Input type: ${data.mode}\n\n${data.source.slice(0, 20000)}` }];
+    } else if (data.kind === "notes") {
+      if (!data.notes.trim()) throw new Error("Please paste your meeting notes.");
+      instructions = SYSTEM.notes;
+      input = [{ role: "user", content: data.notes.slice(0, 20000) }];
     } else {
       instructions = SYSTEM.chat;
       input = data.messages.slice(-20).map((m) => ({ role: m.role, content: m.content.slice(0, 8000) }));

@@ -1,11 +1,12 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { useState, type ReactNode } from "react";
-import { LayoutGrid, Mail, BookOpen, MessageSquare, Settings, Menu, X } from "lucide-react";
+import { LayoutGrid, Mail, BookOpen, MessageSquare, Settings, Menu, X, NotebookPen } from "lucide-react";
 
 const nav = [
   { to: "/", label: "Dashboard", icon: LayoutGrid },
   { to: "/email", label: "Email Generator", icon: Mail },
   { to: "/research", label: "Research Assistant", icon: BookOpen },
+  { to: "/meeting-notes", label: "Meeting Notes", icon: NotebookPen },
   { to: "/chat", label: "AI Chat", icon: MessageSquare },
   { to: "/settings", label: "Settings", icon: Settings },
 ] as const;
